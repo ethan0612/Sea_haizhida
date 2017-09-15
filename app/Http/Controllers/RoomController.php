@@ -52,12 +52,18 @@ class RoomController extends Controller
 
     }
 
+    // 修改指定房间
+    public function updateRoom($id){
+        $rooms = Room::getSelectedRoom($id);
+        return view('admin/room_detail', ['products' => $rooms]);
+    }
+
     // 修改房间
     public function update($id){
         $model = new \App\Room; //实例化model
         $data  = $model -> getSelectedRoom($id);
 
-        echo $data;
+        var_dump($data) ;
         die;
         Room::update($id);
         return redirect('/admin/room');

@@ -19,9 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/admin/room/new', 'RoomController@newProduct');
+Route::get('/admin/room/updateRoom/{id}', 'RoomController@updateRoom');
 Route::get('/admin/room', 'RoomController@index');
 Route::get('/admin/room/destroy/{id}', 'RoomController@destroy');
 Route::post('/admin/room/save', 'RoomController@add');
+Route::get('/', 'MainController@index');
 
 Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 {

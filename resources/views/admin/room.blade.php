@@ -37,7 +37,7 @@
                             <td>{{$room->payment_time}}</td>
                             {{--<td>{{$room->file->original_filename}}</td>--}}
                             <td>
-                                <a href="/admin/room/update/{{$room->id}}"><button class="btn btn-warning active">修改</button></a>
+                                <a href="/admin/room/updateRoom/{{$room->id}}"><button class="btn btn-warning active">修改</button></a>
                                 <a href="/admin/room/destroy/{{$room->id}}"><button class="btn btn-danger active">删除</button></a>
                             </td>
                         </tr>
